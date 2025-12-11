@@ -1022,6 +1022,12 @@ app.use('/api', propertyViewRoutes);
 // Create email transporter
 const transporter = nodemailer.createTransport(EMAIL_CONFIG);
 
-app.listen(3001, '0.0.0.0', () => {
-  console.log('Server running on port 3001');
-});
+// For serverless (e.g., Vercel) export the app instead of listening.
+// Vercel sets process.env.VERCEL; keep local dev/server listening.
+if (!process.env.VERCEL) {
+  app.listen(3001, '0.0.0.0', () => {
+    console.log('Server running on port 3001');
+  });
+}
+
+module.exports = app;
