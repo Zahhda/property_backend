@@ -1,0 +1,24 @@
+
+{
+  "development": {
+    "username": "dorpay_user",
+    "password": "DorPay$Ankit@2025",
+    "database": "dorpay_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "testdev1",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "testdev12",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
